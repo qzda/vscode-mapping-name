@@ -1,0 +1,9 @@
+node_modules
+dist
+test
+# .vscode
+
+bun.lockb
+bun.lock
+.DS_Store
+*.vsix

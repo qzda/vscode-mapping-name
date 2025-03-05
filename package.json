@@ -1,0 +1,73 @@
+{
+  "name": "mapping-name",
+  "displayName": "Mapping Name",
+  "publisher": "qzda",
+  "description": "Mapping Name for VS Code",
+  "icon": "./public/icon.png",
+  "type": "commonjs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qzda/vscode-mapping-name"
+  },
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mapping-name.reload-mapping",
+        "title": "Reload JSON file",
+        "category": "Mapping Name"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Mapping Name",
+      "properties": {
+        "mapping-name.disable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable the Mapping Name extension"
+        },
+        "mapping-name.jsonPath": {
+          "type": "string",
+          "default": "./mapping-name.json",
+          "description": "The path of the JSON file"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "check": "tsc --noEmit && eslint src",
+    "build": "npm run check && node esbuild.js",
+    "build:pro": "npm run check && node esbuild.js --production",
+    "prepublish": "npm run build:pro && vsce package",
+    "publish": "npm run prepublish && vsce publish"
+  },
+  "dependencies": {
+    "@qzda/prolog": "latest"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.2",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.21.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.3"
+  }
+}
