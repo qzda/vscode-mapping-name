@@ -11,9 +11,7 @@ Mapping Name 是一个 Visual Studio Code 扩展，将代码中的变量名映�
 
 ## 安装
 
-1. 打开 VS Code
-2. 按下 `Cmd+P` / `Ctrl+P` 打开命令面板
-3. 输入 `ext install mapping-name`
+[https://marketplace.visualstudio.com/items?itemName=qzda.mapping-name](https://marketplace.visualstudio.com/items?itemName=qzda.mapping-name)
 
 ## 使用方法
 

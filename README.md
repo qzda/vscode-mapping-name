@@ -11,9 +11,7 @@ Mapping Name is a Visual Studio Code extension that maps variable names in your 
 
 ## Installation
 
-1. Open VS Code
-2. Press Cmd+P / Ctrl+P to open the command palette
-3. Type ext install mapping-name
+[https://marketplace.visualstudio.com/items?itemName=qzda.mapping-name](https://marketplace.visualstudio.com/items?itemName=qzda.mapping-name)
 
 ## Usage
 
